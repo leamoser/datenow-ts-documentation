@@ -17,9 +17,7 @@ These are the functions you have at your disposal after implementing.
 
 All functions under this category return a datestring in the following format:
 
-```text
-Sun Jan 01 2023 01:01:01 GMT+0100 (Mitteleuropäische Normalzeit)
-```
+``Sun Jan 01 2023 01:01:01 GMT+0100 (Mitteleuropäische Normalzeit)``
 
 ### Example
 

@@ -1,4 +1,5 @@
 .idea
-.vitepress/cache/
+dist
+cache
 node_modules
 graphics
