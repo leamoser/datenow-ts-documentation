@@ -1,4 +1,4 @@
-# compare
+# 👯 compare
 
 > To use the functions provided under this category, implement them as follows:
 
