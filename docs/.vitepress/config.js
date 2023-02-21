@@ -51,7 +51,17 @@ function sidebar() {
             text: 'Functions',
             collapsed: false,
             items: [
-                { text: '✍️ create', link: '/functions/create' },
+                {
+                    text: '✍️ create',
+                    link: '/functions/create',
+                    collapsed: true,
+                    items: [
+                        { text: 'dateNow()', link: '/functions/create#datenow' },
+                        { text: 'dateByParams()', link: '/functions/create#datebyparams' },
+                        { text: 'dateByMilliseconds()', link: '/functions/create#datebymilliseconds' },
+                        { text: 'dateByDatestring()', link: '/functions/create#datebydatestring' }
+                    ]
+                },
                 { text: '🤲 get', link: '/functions/get' },
                 { text: '🎭 modify', link: '/functions/modify' },
                 { text: '🎰 format', link: '/functions/format' },

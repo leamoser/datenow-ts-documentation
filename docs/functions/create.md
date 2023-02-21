@@ -1,28 +1,67 @@
 # ✍️ create
 
-> To use the functions provided under this category, implement them as follows:
+::: tip USECASE
+Functions under this category help you to create new dates in multiple ways.
+:::
+
+To use the functions provided under this category, implement them as follows:
 
 ```typescript
 import { create } from 'datenow-ts'
 ```
 
-These are the functions you have at your disposal after implementing.
+You will find examples and explanations about all these functions provided
+by this function group.
 
-| command                  | params                                                                  |
-|--------------------------|-------------------------------------------------------------------------|
-| ``dateNow()``            | -                                                                       |
-| ``dateByParams()``       | z.B. `{year: 2023, month: 1, day: 1, hours: 1, minutes: 1, seconds: 1}` |
-| ``dateByMilliseconds()`` | 1 / number / milliseconds from 1.1.1970                                 |
-| ``dateByDatestring()``   | z.B. `2021/03/05`                                                       |
+- ``dateNow()``
+- ``dateByParams()``
+- ``dateByMilliseconds()``
+- ``dateByDatestring()``
 
-All functions under this category return a datestring in the following format:
+### dateNow()
+> Creates a new date by the current date. 
 
-``Sun Jan 01 2023 01:01:01 GMT+0100 (Mitteleuropäische Normalzeit)``
+- **Parameters**: -
+- **Type Return**: ``Date``
 
-### Example
+::: warning IMPORTANT
+All examples in these docs assume, the corerct implenentation has already happend.
+:::
 
 ```typescript
-import { create } from 'datenow-ts'
-const date = create.dateByParams({ year: 2023, month: 1, day: 1 })
-console.log(date)
+const date = create.dateNow()
+// -> returns current date
+```
+
+### dateByParams()
+> Creates a new date by given parameters.
+
+- **Parameters**: `params: DateObjectParams`
+- **Type Return**: ``Date``
+
+```typescript
+const date = create.dateByParams({ year: 2023, month: 4, day: 8 })
+// -> returns date of 8th of April 2023 and 00:00:00 as time
+```
+
+### dateByMilliseconds()
+> Creates a new date by timestamp in milliseconds passed since january first 1970.
+
+- **Parameters**: `ms: Number`
+- **Type Return**: ``Date``
+
+```typescript
+const date = create.dateByMilliseconds(1676979057)
+// -> returns date of 21st February 2023
+```
+
+### dateByDatestring()
+> Creates a new date by a datestring.
+
+- **Parameters**: `datestring: string`
+- **Type Return**: ``Date``
+
+```typescript
+const date = create.dateByDatestring('2021-04-08')
+// -> returns date of 4th April 2021
 ```
