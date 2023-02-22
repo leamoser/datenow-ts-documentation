@@ -91,7 +91,7 @@ console.log(get.weekdayIndex(date)) // -> returns 1 (for Monday)
 > Get different forms of the weekday
 
 ::: warning TRANSLATABLE
-This function accepts a language ISO-Code as a second Parameter.
+This function accepts an optional language ISO-Code as a second Parameter.
 :::
 
 ```typescript

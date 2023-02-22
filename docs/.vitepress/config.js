@@ -94,7 +94,17 @@ function sidebar() {
                     ],
 
                 },
-                { text: '🎰 format', link: '/functions/format' },
+                {
+                    text: '🎰 format',
+                    link: '/functions/format',
+                    collapsed: true,
+                    items: [
+                        { text: 'toIso()', link: '/functions/format#toiso' },
+                        { text: 'toMilliseconds()', link: '/functions/format#tomilliseconds' },
+                        { text: 'toTime()', link: '/functions/format#totime' },
+                        { text: 'toDate()', link: '/functions/format#todate' },
+                    ]
+                },
                 { text: '👵 until', link: '/functions/until' },
                 { text: '🪢 span', link: '/functions/span' },
                 { text: '👯 compare', link: '/functions/compare' }
