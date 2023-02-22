@@ -1,33 +1,92 @@
 # 🪢 span
 
-> To use the functions provided under this category, implement them as follows:
+::: tip USECASE
+Functions under this group return, depending on the function choosen, years or months between two dates.
+:::
+
+To use the functions provided under this category, implement them as follows:
 
 ```typescript
 import { span } from 'datenow-ts'
 ```
 
-Functions under this category give you informations about the the time between two dates.
-For now, only two functions are implemented.
+::: danger IMPORTANT
+The parameter dateFrom has to be before dateFrom, otherwise the function will not work.
+:::
 
-### years(from, to)
+### years()
+> Returns an array with all years lying between two dates.
+
+- **Parameters**: `dateFrom: Date, dateFrom: Date`
+- **Type Return**: `Year[]`
 
 ```typescript
-// -> example
-import { create, span } from 'datenow-ts'
-const from = create.dateNow()
-const to = create.dateByDatestring('2050-04-07')
-console.log('array with years between', span.years(from, to))
-// returns array with all years between -> [2023,2024,2025,...]
+const from = create.dateByDatestring('2023-01-01')
+const to = create.dateByDatestring('2028-01-01')
+console.log(span.years(from, to))
+// -> returns [ 2023, 2024, 2025, 2026, 2027, 2028 ]
 ```
 
-### months(from,to)
+### months()
+> Returns an array with all months bying between two dates.
+
+- **Parameters**: `dateFrom: Date, dateFrom: Date`
+- **Type Return**: `YearMonthObject[]`
+
+::: warning TRANSLATABLE
+This function accepts an optional language ISO-Code as a second Parameter.
+:::
 
 ```javascript
-// -> example
-import { create, span } from 'datenow-ts'
-const from = create.dateNow()
-const to = create.dateByDatestring('2024-04-07')
-console.log('array with months between', span.months(from, to))
-// returns array with all months between -> [ {index: 1, number: 2, short: 'Feb', long: 'February', year: 2023 }, {index: 2, number: 3, short: 'Mar', long: 'March', year: 2023 }, ... ] 
+const from = create.dateByDatestring('2023-10-01')
+const to = create.dateByDatestring('2024-02-01')
+console.log(span.months(from, to))
 ```
 
+::: details Example Return
+Months between two dates
+```typescript
+[
+    {
+        index: 9,
+        number: 10,
+        paddedNumber: '10',
+        short: 'Oct',
+        long: 'October',
+        year: 2023
+    },
+    {
+        index: 10,
+        number: 11,
+        paddedNumber: '11',
+        short: 'Nov',
+        long: 'November',
+        year: 2023
+    },
+    {
+        index: 11,
+        number: 12,
+        paddedNumber: '12',
+        short: 'Dec',
+        long: 'December',
+        year: 2023
+    },
+    {
+        index: 0,
+        number: 1,
+        paddedNumber: '01',
+        short: 'Jan',
+        long: 'January',
+        year: 2024
+    },
+    {
+        index: 1,
+        number: 2,
+        paddedNumber: '02',
+        short: 'Feb',
+        long: 'February',
+        year: 2024
+    }
+]
+```
+:::

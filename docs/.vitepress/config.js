@@ -106,7 +106,15 @@ function sidebar() {
                     ]
                 },
                 { text: '👵 until', link: '/functions/until' },
-                { text: '🪢 span', link: '/functions/span' },
+                {
+                    text: '🪢 span',
+                    link: '/functions/span',
+                    collapsed: true,
+                    items: [
+                        { text: 'years()', link: '/functions/span#years' },
+                        { text: 'months()', link: '/functions/span#months' }
+                    ]
+                },
                 { text: '👯 compare', link: '/functions/compare' }
             ]
         },
