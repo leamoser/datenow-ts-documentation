@@ -23,7 +23,7 @@ function nav() {
     return [
         { text: 'Getting Started', link: '/getting-started/installation' },
         {
-            text: 'Functions',
+            text: 'Function Groups',
             items: [
                 { text: '✍️ create', link: '/functions/create' },
                 { text: '🤲 get', link: '/functions/get' },
@@ -48,7 +48,7 @@ function sidebar() {
             ]
         },
         {
-            text: 'Functions',
+            text: 'Function Groups',
             collapsed: false,
             items: [
                 {
@@ -62,7 +62,27 @@ function sidebar() {
                         { text: 'dateByDatestring()', link: '/functions/create#datebydatestring' }
                     ]
                 },
-                { text: '🤲 get', link: '/functions/get' },
+                {
+                    text: '🤲 get',
+                    link: '/functions/get',
+                    collapsed: true,
+                    items: [
+                        { text: 'year()', link: 'functions/get#year' },
+                        { text: 'yearObject()', link: 'functions/get#yearobject' },
+                        { text: 'monthIndex()', link: 'functions/get#monthindex' },
+                        { text: 'monthObject()', link: 'functions/get#monthobject' },
+                        { text: 'day()', link: 'functions/get#day' },
+                        { text: 'dayObject()', link: 'functions/get#dayobject' },
+                        { text: 'weekdayIndex()', link: 'functions/get#weekdayindex' },
+                        { text: 'weekdayObject()', link: 'functions/get#weekdayobject' },
+                        { text: 'calendarWeek()', link: 'functions/get#calendarweek' },
+                        { text: 'hour()', link: 'functions/get#hour' },
+                        { text: 'minute()', link: 'functions/get#minute' },
+                        { text: 'second()', link: 'functions/get#second' },
+                        { text: 'millisecond()', link: 'functions/get#millisecond' },
+                        { text: 'calendarizedMonth()', link: 'functions/get#calendarizedmonth' }
+                    ]
+                },
                 { text: '🎭 modify', link: '/functions/modify' },
                 { text: '🎰 format', link: '/functions/format' },
                 { text: '👵 until', link: '/functions/until' },

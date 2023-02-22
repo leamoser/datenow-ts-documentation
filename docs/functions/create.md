@@ -10,13 +10,8 @@ To use the functions provided under this category, implement them as follows:
 import { create } from 'datenow-ts'
 ```
 
-You will find examples and explanations about all these functions provided
+You will find examples and explanations here about all the functions provided
 by this function group.
-
-- ``dateNow()``
-- ``dateByParams()``
-- ``dateByMilliseconds()``
-- ``dateByDatestring()``
 
 ### dateNow()
 > Creates a new date by the current date. 
