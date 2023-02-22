@@ -83,7 +83,17 @@ function sidebar() {
                         { text: 'calendarizedMonth()', link: 'functions/get#calendarizedmonth' }
                     ]
                 },
-                { text: '🎭 modify', link: '/functions/modify' },
+                {
+                    text: '🎭 modify',
+                    link: '/functions/modify',
+                    collapsed: true,
+                    items: [
+                        { text: 'add()', link: '/functions/modify#add' },
+                        { text: 'subtract()', link: '/functions/modify#subtract' },
+                        { text: 'changeTo()', link: '/functions/modify#changeto' }
+                    ],
+
+                },
                 { text: '🎰 format', link: '/functions/format' },
                 { text: '👵 until', link: '/functions/until' },
                 { text: '🪢 span', link: '/functions/span' },
